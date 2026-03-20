@@ -24,6 +24,6 @@ class UserController extends Controller
         return response()->json([
             'success' => true,
             'data' => $formattedUsers
-        ]);
+        ], 200, [], JSON_PRETTY_PRINT);
     }
 }

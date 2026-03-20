@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use App\Models\Service;
+
+class ServiceController extends Controller
+{
+    public function index()
+    {
+        $services = Service::all();
+
+        return response()->json([
+            'success' => true,
+            'data' => $services
+        ], 200, [], JSON_PRETTY_PRINT);
+    }
+}
